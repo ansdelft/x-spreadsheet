@@ -1,7 +1,7 @@
 {
   "name": "x-data-spreadsheet",
-  "version": "1.1.8",
-  "description": "a javascript xpreadsheet",
+  "version": "1.1.9",
+  "description": "a javascript spreadsheet",
   "types": "src/index.d.ts",
   "main": "src/index.js",
   "files": [
@@ -13,7 +13,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/myliang/x-spreadsheet.git"
+    "url": "https://github.com/ansdelft/x-spreadsheet.git"
   },
   "nyc": {
     "all": true,
