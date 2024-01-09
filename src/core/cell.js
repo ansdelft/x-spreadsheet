@@ -201,8 +201,7 @@ const evalSuffixExpr = (srcStack, formulaMap, cellRender, cellList) => {
     }
     // console.log('stack:', stack);
   }
-  stack[0] = Number(stack[0]).toFixed(2);
-  stack[0] = stack[0].toString();
+  stack[0] = Number(stack[0]).toFixed(2).toString();
   return stack[0];
 };
 
