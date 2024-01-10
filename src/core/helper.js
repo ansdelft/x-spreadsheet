@@ -99,7 +99,7 @@ function arrayEquals(a1, a2) {
   return true;
 }
 
-function digits(a) {
+export function digits(a) {
   const v = `${a}`;
   let ret = 0;
   let flag = false;
