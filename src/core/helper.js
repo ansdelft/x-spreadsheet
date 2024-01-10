@@ -99,7 +99,7 @@ function arrayEquals(a1, a2) {
   return true;
 }
 
-function digits(a) {
+export function digits(a) {
   const v = `${a}`;
   let ret = 0;
   let flag = false;
@@ -127,7 +127,6 @@ export function numberCalc(type, a1, a2) {
     ret = num1 * num2;
   } else if (type === '/') {
     ret = num1 / num2;
-    if (digits(ret) > 5) return ret.toFixed(2);
     return ret;
   }
   return ret.toFixed(Math.max(al1, al2));
