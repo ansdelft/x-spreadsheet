@@ -21,7 +21,7 @@ const infixExprToSuffixExpr = (src) => {
         subStrs.push(c);
       } else if (c === '"') {
         i += 1;
-        while (src.charAt(i) !== '"') {
+        while (src.charAt(i) !== '"' && i <= src.length) {
           subStrs.push(src.charAt(i));
           i += 1;
         }
