@@ -6,7 +6,7 @@ const selectorHeightBorderWidth = 2 * 2 - 1;
 let startZIndex = 10;
 
 class SelectorElement {
-  constructor(autoFocus = true, useHideInput = false) {
+  constructor(autoFocus = false, useHideInput = false) {
     this.useHideInput = useHideInput;
     this.autoFocus = autoFocus;
     this.inputChange = () => {};

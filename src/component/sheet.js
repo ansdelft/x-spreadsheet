@@ -77,10 +77,12 @@ function selectorSet(multiple, ri, ci, indexesUpdated = true, moving = false) {
   if (multiple) {
     selector.setEnd(ri, ci, moving);
     this.trigger('cells-selected', cell, selector.range);
+    this.trigger('focus');
   } else {
     // trigger click event
     selector.set(ri, ci, indexesUpdated);
     this.trigger('cell-selected', cell, ri, ci);
+    this.trigger('focus');
   }
   contextMenu.setMode((ri === -1 || ci === -1) ? 'row-col' : 'range');
   toolbar.reset();
@@ -721,6 +723,10 @@ function sheetInitEvents() {
 
   bind(window, 'click', (evt) => {
     this.focusing = overlayerEl.contains(evt.target);
+    if (!overlayerEl.contains(evt.target)) {
+      this.focusing = false;
+      this.trigger('blur');
+    }
   });
 
   bind(window, 'paste', (evt) => {
