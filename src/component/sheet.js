@@ -723,10 +723,7 @@ function sheetInitEvents() {
 
   bind(window, 'click', (evt) => {
     this.focusing = overlayerEl.contains(evt.target);
-    if (!overlayerEl.contains(evt.target)) {
-      this.focusing = false;
-      this.trigger('blur');
-    }
+    if (!this.focusing) this.trigger('blur');
   });
 
   bind(window, 'paste', (evt) => {
